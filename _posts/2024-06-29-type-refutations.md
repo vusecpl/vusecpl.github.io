@@ -211,7 +211,7 @@ unknown refinement will lead to a typing failure.
 
 Haystack solves this problem via a new notion we call *must-instantiation*. For
 example, in our example function `test1`, we know that *any* solution to the
-unknown refinement *must* at least contain inhabitant $$3$$, as it is contained in
+unknown refinement *must* at least contain inhabitant `3`, as it is contained in
 the list `[4, 3, 2, 1]`. Since we also know that the unknown refinement must
 imply that all values are even, this alone is enough to ensure that any possible
 solution to the constraints must fail.
@@ -308,8 +308,9 @@ That is, the empty list `[]` is not a list whose length is strictly larger than
 ![Evaluator-Root](/assets/img/case-root.png)
 
 By clicking on `env`, we can get to the screen shown below. This screen displays
-more information about the unknown refinement for `env`, which shows us the origin of
-must-instantiation `[]`. 
+more information about the unknown refinement for `env`, which shows us the
+origin of must-instantiation `[]`. It comes from the top-level call to `go` in
+the definition of `eval`.
 
 ![Evaluator-KVar](/assets/img/case-kvar.png)
 
