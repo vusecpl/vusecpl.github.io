@@ -179,7 +179,7 @@ failure. The judgement says that *no possible type* can be synthesized for $$e$$
 under $$\Gamma$$.
 
 Intuitively, a typing refutation contains two pieces of information. (1) a path
-towards a sub-expression with a failing subtyping check and (2) a concrete
+towards a sub-expression with a failing subtyping check and (2) concrete
 variable instances that violate the constraint.
 
 Refinement type refutations allow us to give a precise meaning to what it means
@@ -209,8 +209,8 @@ While unknown refinements are convenient for the user, they also make finding
 counterexamples hard. We now have to show that *any* possible solution for the
 unknown refinement will lead to a typing failure.
 
-Haystack solves this problem via a new notion we call *must-instantiation*. For
-example, in our example function `test1`, we know that *any* solution to the
+Haystack solves this problem via a new notion we call *must-instantiation*. To
+illustrate, in our example function `test1`, we know that *any* solution to the
 unknown refinement *must* at least contain inhabitant `3`, as it is contained in
 the list `[4, 3, 2, 1]`. Since we also know that the unknown refinement must
 imply that all values are even, this alone is enough to ensure that any possible
